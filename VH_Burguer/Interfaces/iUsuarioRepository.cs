@@ -2,7 +2,7 @@
 
 namespace VH_Burguer.Interfaces
 {
-    public interface iUsuarioRepository
+    public interface IUsuarioRepository
     {
         List<Usuario> Listar();
 

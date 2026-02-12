@@ -4,7 +4,7 @@ using VH_Burguer.Interfaces;
 
 namespace VH_Burguer.Repositories
 {
-    public class UsuarioRepository : iUsuarioRepository
+    public class UsuarioRepository : IUsuarioRepository
     {
         private readonly VH_BurguerContext _context;
 
@@ -58,7 +58,9 @@ namespace VH_Burguer.Repositories
             Usuario? usuario = _context.Usuario.FirstOrDefault(usuarioAux => usuarioAux.UsuarioID == id);
 
             if(usuario == null)
+            { 
                 return;
+            }
             _context.Usuario.Remove(usuario);
             _context.SaveChanges();
         }
