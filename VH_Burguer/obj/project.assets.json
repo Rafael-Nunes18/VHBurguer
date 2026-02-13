@@ -4440,23 +4440,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\23971603823\\.nuget\\packages\\": {},
+    "C:\\Users\\47258134867\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\23971603823\\Documents\\VH_Burguer\\Projeto-VH-Burguer\\VH_Burguer\\VH_Burguer.csproj",
+      "projectUniqueName": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\VH_Burguer.csproj",
       "projectName": "VH_Burguer",
-      "projectPath": "C:\\Users\\23971603823\\Documents\\VH_Burguer\\Projeto-VH-Burguer\\VH_Burguer\\VH_Burguer.csproj",
-      "packagesPath": "C:\\Users\\23971603823\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\23971603823\\Documents\\VH_Burguer\\Projeto-VH-Burguer\\VH_Burguer\\obj\\",
+      "projectPath": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\VH_Burguer.csproj",
+      "packagesPath": "C:\\Users\\47258134867\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\23971603823\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\47258134867\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4465,7 +4465,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

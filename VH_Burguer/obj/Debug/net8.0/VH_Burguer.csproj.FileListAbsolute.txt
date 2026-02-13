@@ -287,3 +287,14 @@ C:\Users\23971603823\Documents\VH_Burguer\Projeto-VH-Burguer\VH_Burguer\obj\Debu
 C:\Users\23971603823\Documents\VH_Burguer\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.csproj.Up2Date
 C:\Users\23971603823\Documents\VH_Burguer\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.genruntimeconfig.cache
 C:\Users\23971603823\Documents\VH_Burguer\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\ref\VH_Burguer.dll
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.csproj.AssemblyReference.cache
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.AssemblyInfoInputs.cache
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.AssemblyInfo.cs
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.csproj.CoreCompileInputs.cache
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.sourcelink.json
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.dll
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\refint\VH_Burguer.dll
+C:\Users\47258134867\source\repos\Projeto-VH-Burguer\VH_Burguer\obj\Debug\net8.0\VH_Burguer.pdb
