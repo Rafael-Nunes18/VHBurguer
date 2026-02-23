@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\interfaces\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:interfaces\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Repositories\\CategoriaRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Repositories\\CategoriaRepository.cs*",
+              "RelativeToolTip": "Repositories\\CategoriaRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T12:42:28.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Interfaces\\ICategoriaRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Interfaces\\ICategoriaRepository.cs*",
+              "RelativeToolTip": "Interfaces\\ICategoriaRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T12:39:12.348Z",
+              "EditorCaption": ""
             }
           ]
         }
