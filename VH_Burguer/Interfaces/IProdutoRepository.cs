@@ -2,10 +2,9 @@
 
 namespace VH_Burguer.Interfaces
 {
-    public interface IProdutoRepositry
+    public interface IProdutoRepository
     {
         List<Produto> Listar();
-        Produto ObterPorID(int id);
 
         byte[] ObterImagem(int id);
 
@@ -14,6 +13,7 @@ namespace VH_Burguer.Interfaces
 
         void Atualizar(Produto produto, List<int> categoriaIds);
 
-        void Deletar(Produto produto, List<int> categoriaIds);
+        void Deletar(int id);
+        Produto ObterPorId(int id);
     }
 }

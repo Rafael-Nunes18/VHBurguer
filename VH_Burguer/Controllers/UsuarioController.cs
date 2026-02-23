@@ -48,7 +48,7 @@ namespace VH_Burguer.Controllers
             return Ok(usuario);
         }
 
-        [HttpPost] // Envia Dados
+        [HttpPost] // Envia Dados/Insert
         public ActionResult<LerUsuarioDto> Adicionar(CriarUsuarioDto usuarioDto)
         {
             try

@@ -1,4 +1,5 @@
-﻿using VH_Burguer.Contexts;
+﻿using VH_Burguer.Applications.Services;
+using VH_Burguer.Contexts;
 using VH_Burguer.Domains;
 using VH_Burguer.Interfaces;
 
@@ -65,12 +66,9 @@ namespace VH_Burguer.Repositories
             _context.SaveChanges();
         }
 
-
-
-
-
-
-
-
+        public UsuarioService ObterPorEmail(object email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using VH_Burguer.Domains;
+﻿using VH_Burguer.Applications.Services;
+using VH_Burguer.Domains;
 
 namespace VH_Burguer.Interfaces
 {
@@ -16,5 +17,6 @@ namespace VH_Burguer.Interfaces
         void Adicionar(Usuario usuario);
         void Atualizar(Usuario usuario);
         void Remover(int id);
+        UsuarioService ObterPorEmail(object email);
     }
 }
