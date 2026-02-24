@@ -7,6 +7,7 @@ using VH_Burguer.Applications.Services;
 using VH_Burguer.Contexts;
 using VH_Burguer.Interfaces;
 using VH_Burguer.Repositories;
+using VHBurguer.Applications.Services;
 using VHBurguer.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,8 +25,13 @@ builder.Services.AddDbContext<VH_BurguerContext>(options => options.UseSqlServer
 // Usuário
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<UsuarioService>();
+
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ProdutoService>();
+
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<CategoriaService>();
+
 builder.Services.AddScoped<AutenticacaoService>();
 builder.Services.AddScoped<GeradorTolkienJWT>();
 

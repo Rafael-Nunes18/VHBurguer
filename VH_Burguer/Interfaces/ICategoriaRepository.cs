@@ -12,5 +12,7 @@ namespace VH_Burguer.Interfaces
         void Adicionar(Categoria categoria);
 
         void Atualizar(Categoria categoria);
+
+        void Remover(int id);
     }
 }

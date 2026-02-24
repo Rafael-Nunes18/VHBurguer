@@ -1,67 +1,109 @@
 ﻿using VH_Burguer.Domains;
 using VH_Burguer.DTOs.CategoriaDTo;
+using VH_Burguer.Exceptions;
 using VH_Burguer.Interfaces;
 
-namespace VH_Burguer.Applications.Services
+namespace VHBurguer.Applications.Services
 {
     public class CategoriaService
     {
-        private readonly ICategoriaRepository
+        private readonly ICategoriaRepository _repository;
+
+        public CategoriaService(ICategoriaRepository repository)
+        {
+            _repository = repository;
+        }
 
         public List<LerCategoriaDto> Listar()
         {
-            List<Categoria> 
+            List<Categoria> categorias = _repository.Listar();
+
+            // converte cada categoria para LerCategoriaDto
+            List<LerCategoriaDto> categoriaDto = categorias.Select(categoria => new LerCategoriaDto
+            {
+                CategoriaID = categoria.CategoriaID,
+                Nome = categoria.Nome
+            }).ToList();
+
+            // Retorna a lista já convertida em DTO
+            return categoriaDto;
         }
 
+        public LerCategoriaDto ObterPorId(int id)
+        {
+            Categoria categoria = _repository.ObterPorId(id);
 
+            if (categoria == null)
+            {
+                throw new DomainException("Categoria não encontrada");
+            }
 
+            LerCategoriaDto categoriaDto = new LerCategoriaDto
+            {
+                CategoriaID = categoria.CategoriaID,
+                Nome = categoria.Nome
+            };
 
-
-
-
-
-
+            return categoriaDto;
+        }
 
         private static void ValidarNome(string nome)
         {
-            if(string IsNullOrWhiteSpace(nome))
+            if (string.IsNullOrWhiteSpace(nome))
             {
-                throw new DomainException("Nome é obrigatorio");
+                throw new DomainException("Nome é obrigatório.");
             }
         }
 
-        public void Adicionar(CriarCategoriaDTo criarDTo)
+        public void Adicionar(CriarCategoriaDTo criarDto)
         {
-            ValidarNome(criarDTo.Nome);
+            ValidarNome(criarDto.Nome);
 
+            if (_repository.NomeExiste(criarDto.Nome))
+            {
+                throw new DomainException("Categoria já existente.");
+            }
+
+            Categoria categoria = new Categoria
+            {
+                Nome = criarDto.Nome,
+            };
+
+            _repository.Adicionar(categoria);
         }
 
         public void Atualizar(int id, CriarCategoriaDTo criarDto)
         {
-            ValidarNome(criarDto.Nome);
+            ValidarNome(criarDto.Nome); // valida se o campo nome foi preenchido
+
             Categoria categoriaBanco = _repository.ObterPorId(id);
 
-            if(categoriaBanco == null)
+            if (categoriaBanco == null)
             {
-                thorow new DomainException("Ja existe uma categoria com esse nome");
+                throw new DomainException("Categoria não encontrada.");
+            }
+
+            // categoriaIdAtual: id -> categoriaIdAtual recebe id
+            if (_repository.NomeExiste(criarDto.Nome, categoriaIdatual: id))
+            {
+                throw new DomainException("Já existe outra categoria com esse nome.");
             }
 
             categoriaBanco.Nome = criarDto.Nome;
-            _repository Atualizar(CategoriaBanco);
+            _repository.Atualizar(categoriaBanco);
         }
 
         public void Remover(int id)
         {
             Categoria categoriaBanco = _repository.ObterPorId(id);
-  
-            if(categoriaBanco == null)
+
+            if (categoriaBanco == null)
             {
-                throw new DomainException("categoria nao encontrada");
+                throw new DomainException("Categoria não encontrada.");
             }
 
-
+            _repository.Remover(id);
         }
-    
+
     }
 }
-            

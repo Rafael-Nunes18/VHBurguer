@@ -1,9 +1,9 @@
-﻿using Microsoft.Identity.Client;
-using VH_Burguer.Contexts;
+﻿using VH_Burguer.Contexts;
 using VH_Burguer.Domains;
 using VH_Burguer.Interfaces;
 
-namespace VH_Burguer.Repositories
+
+namespace VHBurguer.Repositories
 {
     public class CategoriaRepository : ICategoriaRepository
     {
@@ -19,45 +19,60 @@ namespace VH_Burguer.Repositories
             return _context.Categoria.ToList();
         }
 
-        public Categoria ObterPorID(int id)
+        public Categoria ObterPorId(int id)
         {
             Categoria categoria = _context.Categoria.FirstOrDefault(c => c.CategoriaID == id);
-            return categoria;
 
+            return categoria;
         }
 
         public bool NomeExiste(string nome, int? categoriaIdAtual = null)
         {
             var consulta = _context.Categoria.AsQueryable();
 
-
-            if(categoriaIdAtual.HasValue)
+            
+            if (categoriaIdAtual.HasValue)
             {
+               
                 consulta = consulta.Where(categoria => categoria.CategoriaID != categoriaIdAtual.Value);
             }
 
+           
             return consulta.Any(c => c.Nome == nome);
         }
 
-    public void Adicionar(Categoria categoria)
-        {
-            _context.Categoria.Add(Categoria);
-            _context.SaveChanges();
-        }
-
-        public void Atualizar(Categoria categoria)
+        public void Adicionar(Categoria categoria)
         {
             _context.Categoria.Add(categoria);
             _context.SaveChanges();
         }
 
+        public void Atualizar(Categoria categoria)
+        {
+            Categoria categoriaBanco = _context.Categoria.FirstOrDefault(c => c.CategoriaID == categoria.CategoriaID);
+
+            if (categoriaBanco == null)
+            {
+                return;
+            }
+
+            categoriaBanco.Nome = categoria.Nome;
+
+            _context.SaveChanges();
+        }
+
         public void Remover(int id)
         {
-            Categoria categoriaBanco = _context.Categoria, FirstOrDefault(c => c.CategoriaID == id);
+            Categoria categoriaBanco = _context.Categoria.FirstOrDefault(c => c.CategoriaID == id);
 
-            if(categoriaBanco ==  null)
+            if (categoriaBanco == null)
+            {
+                return;
+            }
+
+            _context.Categoria.Remove(categoriaBanco);
+            _context.SaveChanges();
         }
 
-        }
     }
 }
