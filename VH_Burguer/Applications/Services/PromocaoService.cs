@@ -21,13 +21,16 @@ namespace VH_Burguer.Applications.Services
 
             List<LerPromocaoDTo> promocaoDto = promocoes.Select
               (promocao => new LerPromocaoDTo
-            {
-                PromocaoID = promocao.PromocaoID,
-                Nome = promocao.Nome,
-                DataExpiracao = promocao.DataExpiracao,
-                StatusPromocao = Promocao.StatusPromocao
+              {
+                  PromocaoID = promocao.PromocaoID,
+                  Nome = promocao.Nome,
+                  DataExpiracao = promocao.DataExpiracao,
+                  StatusPromocao = promocao.StatusPromocao
 
-            }) ToList();
+              }).ToList();
+
+            return promocaoDto;
+        }
 
 
             public LerPromocaoDTo ObterPorId(int id)
@@ -72,8 +75,39 @@ namespace VH_Burguer.Applications.Services
 
         }
 
+       public void Atualizar(int id, CriarPromocaoDTo promoDto)
+        {
+            ValidarNome(promoDto.Nome);
 
+            Promocao promocaoBanco = _repository.ObterPorID(id);
 
+            if(promocaoBanco == null)
+            {
+                throw new DomainException("Promocao nao encontrada.");
+            }
+
+            if (_repository.NomeExiste(promoDto.Nome,promocaoBanco: id))
+            {
+                throw new DomainException("Ja existe outra promocao com esse nome");
+            }
+
+            promocaoBanco.Nome = promoDto.Nome;
+            promocaoBanco.DataExpiracao = promoDto.DataExpiracao;
+            promocaoBanco.StatusPromocao = promoDto.StatusPromocao;
+
+            _repository.Atualizar(promocaoBanco);
+        }
+
+        public void Remover(int id)
+        {
+            Promocao promocaoBanco = _repository.ObterPorID(id);
+
+            if(promocaoBanco == null)
+            {
+                throw new DomainException("Promocao nao encontrado");
+            }
+            _repository.Remover(id);
         }
     }
 }
+

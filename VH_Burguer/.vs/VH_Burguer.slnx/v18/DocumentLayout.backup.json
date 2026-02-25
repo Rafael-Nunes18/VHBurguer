@@ -58,8 +58,7 @@
               "RelativeToolTip": "Applications\\Regras\\ValidarDataExpiracaoPromocao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T13:41:57.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T13:41:57.961Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Repositories\\PromocaoRepository.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T13:02:39.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T13:02:39.849Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Interfaces\\IPromocaoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T12:57:11.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T12:57:11.97Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "DTOs\\PromocaoDTo\\LerPromocaoDTo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T12:55:29.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T12:55:29.985Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "DTOs\\PromocaoDTo\\CriarPromocaoDTo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T12:53:33.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T12:53:33.779Z"
             }
           ]
         }

@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\applications\\services\\promocaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:applications\\services\\promocaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\applications\\regras\\validardataexpiracaopromocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:applications\\regras\\validardataexpiracaopromocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\repositories\\promocaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:repositories\\promocaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\interfaces\\ipromocaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:interfaces\\ipromocaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\dtos\\promocaodto\\lerpromocaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:dtos\\promocaodto\\lerpromocaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|c:\\users\\47258134867\\source\\repos\\projeto-vh-burguer\\vh_burguer\\dtos\\promocaodto\\criarpromocaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A358AEB-75CA-515E-7110-B1B27EA744D6}|VH_Burguer.csproj|solutionrelative:dtos\\promocaodto\\criarpromocaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,79 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ValidarDataExpiracaoPromocao.cs",
-              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Applications\\Regras\\ValidarDataExpiracaoPromocao.cs",
-              "RelativeDocumentMoniker": "Applications\\Regras\\ValidarDataExpiracaoPromocao.cs",
-              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Applications\\Regras\\ValidarDataExpiracaoPromocao.cs",
-              "RelativeToolTip": "Applications\\Regras\\ValidarDataExpiracaoPromocao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T13:41:57.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PromocaoService.cs",
-              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Applications\\Services\\PromocaoService.cs",
-              "RelativeDocumentMoniker": "Applications\\Services\\PromocaoService.cs",
-              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Applications\\Services\\PromocaoService.cs",
-              "RelativeToolTip": "Applications\\Services\\PromocaoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T13:20:05.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PromocaoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Repositories\\PromocaoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\PromocaoRepository.cs",
-              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Repositories\\PromocaoRepository.cs",
-              "RelativeToolTip": "Repositories\\PromocaoRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T13:02:39.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPromocaoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Interfaces\\IPromocaoRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IPromocaoRepository.cs",
-              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\Interfaces\\IPromocaoRepository.cs",
-              "RelativeToolTip": "Interfaces\\IPromocaoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T12:57:11.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LerPromocaoDTo.cs",
-              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\DTOs\\PromocaoDTo\\LerPromocaoDTo.cs",
-              "RelativeDocumentMoniker": "DTOs\\PromocaoDTo\\LerPromocaoDTo.cs",
-              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\DTOs\\PromocaoDTo\\LerPromocaoDTo.cs",
-              "RelativeToolTip": "DTOs\\PromocaoDTo\\LerPromocaoDTo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T12:55:29.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CriarPromocaoDTo.cs",
-              "DocumentMoniker": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\DTOs\\PromocaoDTo\\CriarPromocaoDTo.cs",
-              "RelativeDocumentMoniker": "DTOs\\PromocaoDTo\\CriarPromocaoDTo.cs",
-              "ToolTip": "C:\\Users\\47258134867\\source\\repos\\Projeto-VH-Burguer\\VH_Burguer\\DTOs\\PromocaoDTo\\CriarPromocaoDTo.cs",
-              "RelativeToolTip": "DTOs\\PromocaoDTo\\CriarPromocaoDTo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T12:53:33.779Z"
             }
           ]
         }
