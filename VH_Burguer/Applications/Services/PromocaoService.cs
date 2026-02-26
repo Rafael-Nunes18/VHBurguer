@@ -1,10 +1,10 @@
-﻿using VH_Burguer.Applications.Regras;
-using VH_Burguer.Domains;
+﻿using VH_Burguer.Domains;
 using VH_Burguer.DTOs.PromocaoDTo;
 using VH_Burguer.Exceptions;
 using VH_Burguer.Interfaces;
+using VHBurguer.Applications.Regras;
 
-namespace VH_Burguer.Applications.Services
+namespace VHBurguer.Applications.Services
 {
     public class PromocaoService
     {
@@ -19,76 +19,79 @@ namespace VH_Burguer.Applications.Services
         {
             List<Promocao> promocoes = _repository.Listar();
 
-            List<LerPromocaoDTo> promocaoDto = promocoes.Select
-              (promocao => new LerPromocaoDTo
-              {
-                  PromocaoID = promocao.PromocaoID,
-                  Nome = promocao.Nome,
-                  DataExpiracao = promocao.DataExpiracao,
-                  StatusPromocao = promocao.StatusPromocao
-
-              }).ToList();
-
-            return promocaoDto;
-        }
-
-
-            public LerPromocaoDTo ObterPorId(int id)
-        {
-            Promocao promocao = _repository.ObterPorID(id);
-
-            if(promocao == null)
-            {
-                throw new DomainException("Promocao nao encontrada.");
-            }
-
-            LerPromocaoDTo promocaoDTo = new LerPromocaoDTo
+            List<LerPromocaoDTo> promocoesDto = promocoes.Select(promocao => new LerPromocaoDTo
             {
                 PromocaoID = promocao.PromocaoID,
                 Nome = promocao.Nome,
                 DataExpiracao = promocao.DataExpiracao,
                 StatusPromocao = promocao.StatusPromocao
+            }).ToList();
 
-                return promocaoDTo;
-            }
-        private static void ValidarDataExpiracao(DateTime dataExpiracao)
-        {
-            if (dataExpiracao <= DateTime.Now)
-            {
-                throw new DomainException("Nome é obrigatorio");
-            }
-        }
-        public void Adicionar(CriarPromocaoDTo promocaoDTo)
-        {
-            ValidarNome(promocaoDTo.Nome);
-            ValidarDataExpiracaoPromocao.ValidarDataExpiracao
-                (promocaoDTo.DataExpiracao);
-
-            if (_repository.NomeExiste(promocaoDTo.Nome))
-            {
-                throw new DomainException("Promocao ja existente");
-            }
-
-            Promocao promocao = new Promocao();
-
-
-
+            return promocoesDto;
         }
 
-       public void Atualizar(int id, CriarPromocaoDTo promoDto)
+        public LerPromocaoDTo ObterPorId(int id)
+        {
+            Promocao promocao = _repository.ObterPorID(id);
+
+            if (promocao == null)
+            {
+                throw new DomainException("Promoção não encontrada.");
+            }
+
+            LerPromocaoDTo promocaoDto = new LerPromocaoDTo
+            {
+                PromocaoID = promocao.PromocaoID,
+                Nome = promocao.Nome,
+                DataExpiracao = promocao.DataExpiracao,
+                StatusPromocao = promocao.StatusPromocao
+            };
+
+            return promocaoDto;
+        }
+
+        private static void ValidarNome(string nome)
+        {
+            if (string.IsNullOrWhiteSpace(nome))
+            {
+                throw new DomainException("Nome é obrigatório");
+            }
+        }
+
+        public void Adicionar(CriarPromocaoDTo promoDto)
+        {
+            ValidarNome(promoDto.Nome);
+            ValidarDataExpiracaoPromocao.ValidarDataExpiracao(promoDto.DataExpiracao);
+
+            if (_repository.NomeExiste(promoDto.Nome))
+            {
+                throw new DomainException("Promoção já existente.");
+            }
+
+            Promocao promocao = new Promocao
+            {
+                Nome = promoDto.Nome,
+                DataExpiracao = promoDto.DataExpiracao,
+                StatusPromocao = promoDto.StatusPromocao
+            };
+
+            _repository.Adicionar(promocao);
+        }
+
+        public void Atualizar(int id, CriarPromocaoDTo promoDto)
         {
             ValidarNome(promoDto.Nome);
 
             Promocao promocaoBanco = _repository.ObterPorID(id);
 
-            if(promocaoBanco == null)
+            if (promocaoBanco == null)
             {
-                throw new DomainException("Promocao nao encontrada.");
+                throw new DomainException("Promoção não encontrada.");
             }
 
-            if (_repository.NomeExiste(promoDto.Nome,promocaoBanco: id))
+            if (_repository.NomeExiste(promoDto.Nome, promocaoIdAtual: id))
             {
-                throw new DomainException("Ja existe outra promocao com esse nome");
+                throw new DomainException("Já existe outra promoção com esse nome");
             }
 
             promocaoBanco.Nome = promoDto.Nome;
@@ -102,12 +105,12 @@ namespace VH_Burguer.Applications.Services
         {
             Promocao promocaoBanco = _repository.ObterPorID(id);
 
-            if(promocaoBanco == null)
+            if (promocaoBanco == null)
             {
-                throw new DomainException("Promocao nao encontrado");
+                throw new DomainException("Promoção não encontrada");
             }
+
             _repository.Remover(id);
         }
     }
 }
-

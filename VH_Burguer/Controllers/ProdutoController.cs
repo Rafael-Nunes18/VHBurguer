@@ -4,6 +4,7 @@ using System.Security.Claims;
 using VH_Burguer.Applications.Services;
 using VH_Burguer.DTOs.ProdutoDtos;
 using VH_Burguer.Exceptions;
+using VHBurguer.DTOs.ProdutoDto;
 
 namespace VH_Burguer.Controllers
 {

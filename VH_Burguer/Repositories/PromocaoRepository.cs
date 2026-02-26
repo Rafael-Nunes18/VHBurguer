@@ -1,11 +1,10 @@
-﻿using Microsoft.Identity.Client;
-using VH_Burguer.Contexts;
+﻿using VH_Burguer.Contexts;
 using VH_Burguer.Domains;
 using VH_Burguer.Interfaces;
 
-namespace VH_Burguer.Repositories
+namespace VHBurguer.Repositories
 {
-    public class PromocaoRepository: IPromocaoRepository
+    public class PromocaoRepository : IPromocaoRepository
     {
 
         private readonly VH_BurguerContext _context;
@@ -20,31 +19,32 @@ namespace VH_Burguer.Repositories
             return _context.Promocao.ToList();
         }
 
-        public Promocao ObterPorId(int id)
+        public Promocao ObterPorID(int id)
         {
-            Promocao promocao = context.Promocao.FirstOrDefault(p => p.PromocaoID == id);
+            Promocao promocao = _context.Promocao.FirstOrDefault(p => p.PromocaoID == id);
 
             return promocao;
         }
-    }
 
-    public bool NomeExiste(string nome, int? promocaoIdAtual = null)
+        public bool NomeExiste(string nome, int? promocaoIdAtual = null)
         {
             var consulta = _context.Promocao.AsQueryable();
 
             if (promocaoIdAtual.HasValue)
             {
                 consulta = consulta.Where(p => p.PromocaoID != promocaoIdAtual.Value);
-
             }
 
-            public void Adicionar(Promocao promocao)
-           {
+            return consulta.Any(p => p.Nome == nome);
+        }
+
+        public void Adicionar(Promocao promocao)
+        {
             _context.Promocao.Add(promocao);
             _context.SaveChanges();
-           }
+        }
 
-           public void Atualizar(Promocao promocao)
+        public void Atualizar(Promocao promocao)
         {
             Promocao? promocaoBanco = _context.Promocao.FirstOrDefault(p => p.PromocaoID == promocao.PromocaoID);
 
@@ -52,10 +52,10 @@ namespace VH_Burguer.Repositories
             {
                 return;
             }
+
             promocaoBanco.Nome = promocao.Nome;
             promocaoBanco.DataExpiracao = promocao.DataExpiracao;
             promocaoBanco.StatusPromocao = promocao.StatusPromocao;
-
 
             _context.SaveChanges();
         }
@@ -64,16 +64,13 @@ namespace VH_Burguer.Repositories
         {
             Promocao? promocao = _context.Promocao.FirstOrDefault(p => p.PromocaoID == id);
 
-            if(promocao == null)
+            if (promocao == null)
             {
                 return;
             }
+
             _context.Promocao.Remove(promocao);
             _context.SaveChanges();
         }
-
-
-
-
-        }
+    }
 }

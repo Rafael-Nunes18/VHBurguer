@@ -52,19 +52,25 @@ builder.Services.AddDbContext<VH_BurguerContext>(options => options.UseSqlServer
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<UsuarioService>();
 
+// Produto
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ProdutoService>();
 
+// Categoria
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
-
-
-
-
 builder.Services.AddScoped<CategoriaService>();
 
-builder.Services.AddScoped<AutenticacaoService>();
-builder.Services.AddScoped<GeradorTolkienJWT>();
+// Promoção
+builder.Services.AddScoped<IPromocaoRepository, PromocaoRepository>();
+builder.Services.AddScoped<PromocaoService>();
 
+// Log de Alteração
+builder.Services.AddScoped<ILogRepository, LogAlteracaoProdutoRepository>();
+builder.Services.AddScoped<LogAlteracaoProdutoService>();
+
+// JWT
+builder.Services.AddScoped<GeradorTolkienJWT>();
+builder.Services.AddScoped<AutenticacaoService>();
 
 
 // Configura o sistema de autenticação da aplicação.
@@ -120,6 +126,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             )
         };
     });
+
 
 var app = builder.Build();
 

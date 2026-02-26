@@ -45,6 +45,14 @@ namespace VH_Burguer.Applications.Services
             }
         }
 
+        private static void ValidarNome(string nome)
+        {
+            if (string.IsNullOrWhiteSpace(nome))
+            {
+                throw new DomainException("Nome inválido.");
+            }
+        }
+
         private static byte[] HashSenha(string senha)
         {
             if (string.IsNullOrWhiteSpace(senha))
@@ -81,6 +89,9 @@ namespace VH_Burguer.Applications.Services
 
         public LerUsuarioDto Adicionar(CriarUsuarioDto usuarioDto)
         {
+            ValidarNome(usuarioDto.Nome);
+
+
             ValidarEmail(usuarioDto.Email);
 
             if (_repository.EmailExiste(usuarioDto.Email))
@@ -98,7 +109,8 @@ namespace VH_Burguer.Applications.Services
 
             _repository.Adicionar(usuario);
 
-            return LerDto(usuario); 
+            return LerDto(usuario);
+
 
 
         }

@@ -1,5 +1,6 @@
 ﻿using VH_Burguer.Domains;
 using VH_Burguer.DTOs.ProdutoDtos;
+using VHBurguer.DTOs.ProdutoDto;
 
 namespace VHBurguer.Applications.Conversoes
 {
